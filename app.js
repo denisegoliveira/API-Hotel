@@ -1,4 +1,5 @@
 const express = require('express');
+const funcionariosModel = require('./src/models/funcModels.js')
 
 const app = express();
 
