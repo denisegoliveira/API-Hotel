@@ -1,4 +1,5 @@
 const { Sequelize } = require('sequelize')
+require('dotenv-safe/config.js');
 
 const sequelize = new Sequelize('sqlite:./src/database/database.sqlite') //manipular banco de dados
 

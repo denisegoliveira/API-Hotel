@@ -1,18 +1,24 @@
+require('dotenv-safe/config.js');
+
 const express = require('express');
-const funcionariosModel = require('./src/models/funcModels.js')
+const PORT = process.env.PORT
+
+const funcionarios = require('./src/models/funcModels.js')
+const sequelize = require('./src/database/connection.js')                 //conectar banco de dados - database
+const rotas = require('./src/routes/funcRoutes.js') 
 
 const app = express();
 
-const sequelize = require('./src/database/connection.js') //conectar banco de dados
-
 app.use(express.json());
+
+app.use('/funcionarios', funcRoutes)
 
 //sincronizar banco
 async function sincronizar() {
     try {
         await sequelize.sync()
-        app.listen(3000, () => console.log(`Servidor rodando`));
-        }catch (error) {
+        app.listen(PORT, () => console.log(`Servidor rodando na ${PORT}`));
+        } catch (error) {
         console.log('Erro ao conectar banco: ${error}')
     }
 }

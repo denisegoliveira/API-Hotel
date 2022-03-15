@@ -1,9 +1,13 @@
-const sequelize = require('../database/connection.js')
-const { DataTypes } = require('sequelize')
+const sequelize = require("../database/connection.js");
+const { DataTypes } = require("sequelize");
 
 //informações para banco de dados
-const funcionariosModels = sequelize.define('funcionarios', {
-  nomeCompleto: {
+const funcionarios = sequelize.define("funcionarios", {
+  nome: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  sobrenome: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -14,7 +18,6 @@ const funcionariosModels = sequelize.define('funcionarios', {
   cargo: {
     type: DataTypes.STRING,
     allowNull: false,
-   
   },
   dataAdmissao: {
     type: DataTypes.DATEONLY,
@@ -28,18 +31,18 @@ const funcionariosModels = sequelize.define('funcionarios', {
     type: DataTypes.STRING,
     allowNull: false,
     isInt: {
-        args: [["matutino", "vespertino", "noturno"]],
-        msg: "Escolha um turno entre matutino, vespertino e noturno",
-      },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
+      args: [["matutino", "vespertino", "noturno"]],
+      msg: "Escolha um turno entre matutino, vespertino e noturno",
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    telefone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
-  telefone: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-}
-})
+});
 
-module.exports = funcionariosModels;
+module.exports = funcionarios;
