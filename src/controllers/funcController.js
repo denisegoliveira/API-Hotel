@@ -111,8 +111,8 @@ class funcionarioController {
       const funcionarios = await funcionarioModels.findOne({ where: { id: id }, raw: true })
   
       if (!funcionarios) {
-        return res.status(401).json({
-          status: 401,
+        return res.status(400).json({
+          status: 400,
           message: 'O funcionário não foi encontrado!'
         })
       }
