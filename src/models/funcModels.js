@@ -34,15 +34,9 @@ const funcionarios = sequelize.define("funcionarios", {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
-      isAlpha: {                                  
-        msg: 'O campo deve conter um cargo',
-        // noEmpty: {                                                 //não permitir campo vazio
-        //   msg: 'Esse campo não pode ser vazio',
-        // },
-        // isIn: {                                                     // escolher entre as opções
-        //   args: [["a", "b", "c"]],
-        //   msg: "Escolha um cargo entre as opções disponiveis"      
-        // }
+        isIn: {                                                     // escolher entre as opções
+          args: [["gerente", "recepcionista", "camareira", "supervisor"]],
+          msg: "Escolha um cargo entre as opções disponiveis"      
       }
     }
   },
@@ -51,7 +45,6 @@ const funcionarios = sequelize.define("funcionarios", {
     allowNull: false,
     validate: {
       isDate: true
-      }
     }
   },
   salario: {
@@ -61,10 +54,10 @@ const funcionarios = sequelize.define("funcionarios", {
         isAlphanumeric: {
           msg: 'Insira um valor',
       },
-      // len: {                                                    //incluir limitação de caracteres
-      //   args: [4, 7],
-      //     msg: 'Esse campo precisa ter entre 4 e 7 caracteres'
-      // }
+      len: {                                                    //incluir limitação de caracteres
+        args: [4, 7],
+          msg: 'Esse campo precisa ter entre 4 e 7 caracteres'
+      }
     }
   },
   turno: {
@@ -75,6 +68,7 @@ const funcionarios = sequelize.define("funcionarios", {
         isIn: {
       args: [["matutino", "vespertino", "noturno"]],
       msg: "Escolha um turno entre matutino, vespertino e noturno",
+          }
         }
       }
     },

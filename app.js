@@ -9,9 +9,10 @@ const rotas = require('./src/routes/funcRoutes.js')
 
 const app = express();
 
+
 app.use(express.json());
 
-app.use('/funcionarios', funcRoutes)
+app.use('/funcionarios', rotas)
 
 //sincronizar banco
 async function sincronizar() {

@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize')
 require('dotenv-safe/config.js');
 
-const sequelize = new Sequelize('sqlite:./src/database/database.sqlite') //manipular banco de dados
+const sequelize = new Sequelize(process.env.DB_URL) //manipular banco de dados
 
 async function connect() {
   try {
