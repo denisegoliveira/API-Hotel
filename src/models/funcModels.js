@@ -5,60 +5,61 @@ const { DataTypes } = require("sequelize");
 const funcionarios = sequelize.define("funcionarios", {
   nome: {
     type: DataTypes.STRING,
-    allowNull: false,                                      //não habilita campo nulo
+    allowNull: false, //não habilita campo nulo
     validate: {
-      isAlpha: {                                       
-        msg: 'O campo deve conter somente letras',
-      }
-    }
+      notEmpty: {
+        msg: "Esse campo precisa ser preenchido",
+      },
+    },
   },
   sobrenome: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
-      isAlpha: {
-        msg: 'O campo deve conter somente letras',
-      }
-    }
+      notEmpty: {
+        msg: "Esse campo precisa ser preenchido",
+      },
+    },
   },
   cpf: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
       isAlphanumeric: {
-        msg: 'O campo deve conter somente os números do CPF',
-      }
-    }
+        msg: "Esse campo deve conter somente os números do CPF",
+      },
+    },
   },
   cargo: {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
-        isIn: {                                                     // escolher entre as opções
-          args: [["gerente", "recepcionista", "camareira", "supervisor"]],
-          msg: "Escolha um cargo entre as opções disponiveis"      
-      }
-    }
+      isIn: {
+        args: [["gerente", "recepcionista", "camareira", "supervisor"]],
+        msg: "Escolha um cargo entre as opções disponiveis",
+      },
+    },
   },
   dataAdmissao: {
     type: DataTypes.DATEONLY,
     allowNull: false,
     validate: {
-      isDate: true
-    }
+      isDate: true,
+    },
   },
   salario: {
     type: DataTypes.FLOAT,
     allowNull: false,
-      validate: {
-        isAlphanumeric: {
-          msg: 'Insira um valor',
+    validate: {
+      isAlphanumeric: {
+        msg: "Insira um valor",
       },
-      len: {                                                    //incluir limitação de caracteres
+      len: {
+        //incluir limitação de caracteres
         args: [4, 7],
-          msg: 'Esse campo precisa ter entre 4 e 7 caracteres'
-      }
-    }
+        msg: "O valor precisa ter entre 4 e 7 caracteres",
+      },
+    },
   },
   turno: {
     type: DataTypes.STRING,
@@ -66,30 +67,32 @@ const funcionarios = sequelize.define("funcionarios", {
     isInt: {
       Validate: {
         isIn: {
-      args: [["matutino", "vespertino", "noturno"]],
-      msg: "Escolha um turno entre matutino, vespertino e noturno",
-          }
-        }
-      }
+          args: [["matutino", "vespertino", "noturno"]],
+          msg: "Escolha um turno entre matutino, vespertino e noturno",
+        },
+      },
     },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isEmail: {
-          msg: 'Preencha com um email válido',
-        }
-      }
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      isEmail: {
+        msg: "Preencha com um email válido",
+      },
     },
-    telefone: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isAlphanumeric: {
-          msg: 'Escreva somente os números do telefone',
-        }
-      }
+  },
+  telefone: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      isAlphanumeric: {
+        msg: "Escreva somente os números do telefone",
+      },
     },
+  },
 });
+
+
 
 module.exports = funcionarios;

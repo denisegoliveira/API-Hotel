@@ -1,17 +1,17 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const funcionarioController = require("../controllers/funcController.js");
 
-router.post('/create', funcionarioController.create)     
 
-router.get('/', funcionarioController.showAll)               //listar todos
+router.post("/create", funcionarioController.create);
 
-router.get('/:id', funcionarioController.showById)          //buscar por id
+router.get("/", funcionarioController.showAll); //listar todos
 
-router.delete('/:id', funcionarioController.deleteById)        
+router.get("/:id", funcionarioController.showById); //buscar por id
 
-router.patch('/:id', funcionarioController.updateById)
+router.delete("/:id", funcionarioController.deleteById);
 
+router.patch("/:id", funcionarioController.updateById);
 
 
 
