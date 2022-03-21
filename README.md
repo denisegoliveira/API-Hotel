@@ -123,4 +123,4 @@ O projeto foi desenvolvido para conclusão do Módulo 4 da Turma 10 do curso de 
 <br>
 
 ---
-**Desenvolvido por <a href="https://www.linkedin.com/in/bruno-andreotti/">Bruno Andreotti</a>, <a href="https://www.linkedin.com/in/denise-g-oliveira/">Denise G. Oliveira</a>, <a href="https://www.linkedin.com/in/heitorschumann/">Heitor Schumann</a>, Henrique Ferraz, e <a href="https://www.linkedin.com/in/murilo-antunes-bb1143228/">Murilo Antunes</a>.** 
+**Desenvolvido por <a href="https://www.linkedin.com/in/bruno-andreotti/">Bruno Andreotti</a>, <a href="https://www.linkedin.com/in/denise-g-oliveira/">Denise Oliveira</a>, <a href="https://www.linkedin.com/in/heitorschumann/">Heitor Schumann</a>, <a href="https://www.linkedin.com/in/henrique-ferraz-a46123219/" > Henrique Ferraz </a> e <a href="https://www.linkedin.com/in/murilo-antunes-bb1143228/">Murilo Antunes</a>.** 
