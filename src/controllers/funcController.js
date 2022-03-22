@@ -105,7 +105,7 @@ class funcionarioController {
       nome,
       sobrenome,
       cpf,
-      cargo, //const para objeto
+      cargo, 
       dataAdmissao,
       salario,
       turno,

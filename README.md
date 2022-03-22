@@ -66,8 +66,8 @@ Esta API foi desenvolvida para manipular o banco de dados de ***funcionários***
     "sobrenome": "sobrenome",
     "cpf": "11111111100",
     "cargo": "recepcionista",
-    "dataAdmissao": "01/10/2000",
-    "salario": "0000",
+    "dataAdmissao": "01/10/2015",
+    "salario": "1700",
     "turno": "noturno",
     "email": "nome@email.com",
     "telefone": "00000000000"
@@ -77,9 +77,24 @@ Esta API foi desenvolvida para manipular o banco de dados de ***funcionários***
 <b>[DELETE] </b> /funcionarios/:id - Deletar um funcionário baseado no ID escolhido.<br>
 <br>
 
+### Validação
 
-:pushpin: Foi adicionada validações para os dados recebidos nas requisições, tais como: limite de caracteres para CPF, telefone e salário.<br>
- <br>
+Foi adicionada as seguintes validações para os dados recebidos nas requisições: <br>
+
+<b> [POST] </b> /funcionarios/create
+
+- Os campos "nome" e "sobrenome" deverão ser uma string;
+- O campo "cpf" deverá conter apenas os números, total de 11 digitos;
+- O campo "cargo" deverá ser uma das opções disponíveis (gerente, recepcionista, camareira, supervisor);
+- O campo "dataAdmissao" deverá conter uma data no formato 'DD/MM/AAAA';
+- O campo "salario" deverá conter apenas números, entre 4 e 7 digitos;
+- O campo "turno" deverá ser uma das opções disponíveis (matutino, vespertino, noturno);
+- O campo "email" deverá ser uma string no formato email (nome@mail.com);
+- O campo "telefone" deverá conter apenas os números do telefone, total de 11 digitos.
+
+<b> [PATCH] </b> /funcionarios/:id 
+
+Todos os campos podem ser atualizados ao mesmo tempo ou somente um campo de por vez.<br>
 
 ## :white_check_mark: Rodando o projeto
 
@@ -112,7 +127,7 @@ $ npm start
 
 
 ## Ferramentas e Tecnologias 
-<br>
+
 <p align="center">
 <a href="https://nodejs.org/en/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="40" /></a> <a href="https://expressjs.com/pt-br/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" height="40" width="40" /></a> <a href="https://insomnia.rest/download"><img src="https://raw.githubusercontent.com/brunoandreotti/biblioteca-backend/79c23c6a4bdd0bc6cb95463ee47741f2226cb0b1/readme/insomnia.svg" height="40" width="40" /></a> <a href="https://sequelize.org"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" height="40" width="40" /></a> <a href="https://sqlite.org"><img src="https://cdn.worldvectorlogo.com/logos/sqlite.svg" height="40" width="40" /></a> <a href="https://git-scm.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="40" /></a> <a href="https://code.visualstudio.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" width="40" /></a>
 </p>
