@@ -20,7 +20,7 @@
 ## Descrição do projeto
 O objetivo do projeto foi criar uma API para um hotel utilizando NodeJs. 
 
-O projeto foi desenvolvido em grupo e cada integrante ficou responsável pela criação de uma API referente à um dos serviços oferecidos em um hotel ou que tivesse alguma relação com o tema. As entidades escolhidas para o banco de dados foram: clientes, funcionários, cardápio, franquias e quartos. Além do NodeJs, para essa aplicação foram necessários o Express, Sequelize e SQLite3. Também utilizou-se o Insomnia como ferramenta de testes iniciais.
+O projeto foi desenvolvido em grupo e cada integrante ficou responsável pela criação de uma API referente à hotel. As entidades escolhidas para o banco de dados foram: clientes, funcionários, cardápio, franquias e quartos. Além do NodeJs, para essa aplicação foram necessários o Express, Sequelize e SQLite3. Também utilizou-se o Insomnia para testar as requisições.
 
 Esta API foi desenvolvida para manipular o banco de dados de ***funcionários*** , e possui funcionalidades para **cadastrar**, **listar**, **atualizar** e **deletar**.
 <br>
@@ -59,7 +59,7 @@ Esta API foi desenvolvida para manipular o banco de dados de ***funcionários***
 }
 ```
 
-<b>[PATCH] </b> /funcionarios/:id - Atualizar um funcionário com as novas informações passadas no body da requisição. Caso necessário, apenas uma informação pode ser atualizada por vez.<br>
+<b>[PATCH] </b> /funcionarios/:id - Atualizar um funcionário com as novas informações passadas no body da requisição.<br>
 
 ```javascript
 {
@@ -94,10 +94,9 @@ Foi adicionada as seguintes validações para os dados recebidos nas requisiçõ
 
 <b> [PATCH] </b> /funcionarios/:id 
 
-Todos os campos podem ser atualizados ao mesmo tempo ou somente um campo de por vez.<br>
+Todos os campos podem ser atualizados ao mesmo tempo ou somente um campo por vez.<br>
 
 ### :ballot_box_with_check: **Rodando o projeto**
-<br>
 
 #### ***Pré-requisitos:*** <br>
 
@@ -105,7 +104,6 @@ Antes de começar, caso ainda não tenha em sua máquina os itens a seguir, voc�
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Insomnia](https://insomnia.rest/download) (ou Postman). Além disso, é interessante o uso de um editor de código como o [VSCode](https://code.visualstudio.com/).
 
 ### Instalando e rodando o projeto no servidor:
-
 
 ```bash
 # Clone este repositório
@@ -126,11 +124,10 @@ $ npm start
 
 ```
 
-
 ## Ferramentas e Tecnologias 
 
 <p align="center">
-<a href="https://nodejs.org/en/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="40" /></a> <a href="https://expressjs.com/pt-br/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" height="40" width="40" /></a> <a href="https://insomnia.rest/download"><img src="https://raw.githubusercontent.com/brunoandreotti/biblioteca-backend/79c23c6a4bdd0bc6cb95463ee47741f2226cb0b1/readme/insomnia.svg" height="40" width="40" /></a> <a href="https://sequelize.org"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" height="40" width="40" /></a> <a href="https://sqlite.org"><img src="https://cdn.worldvectorlogo.com/logos/sqlite.svg" height="40" width="40" /></a> <a href="https://git-scm.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="40" /></a> <a href="https://code.visualstudio.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" width="40" /></a>
+<a href="https://nodejs.org/en/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="40" /></a> <a href="https://expressjs.com/pt-br/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg" height="40" width="40" /></a> <a href="https://insomnia.rest/download"><img src="https://raw.githubusercontent.com/brunoandreotti/biblioteca-backend/79c23c6a4bdd0bc6cb95463ee47741f2226cb0b1/readme/insomnia.svg" height="40" width="40" /></a> <a href="https://sequelize.org"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" height="40" width="40" /></a> <a href="https://sqlite.org"><img src="./img/sqlite.png" height="40" width="40" /></a> <a href="https://git-scm.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="40" /></a> <a href="https://code.visualstudio.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" width="40" /></a>
 </p>
 
 
