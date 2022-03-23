@@ -36,7 +36,8 @@ Esta API foi desenvolvida para manipular o banco de dados de ***funcionários***
 
 ## Rotas da aplicação:  
 
-### :hotel: Funcionarios: <br>
+### :hotel: **Funcionarios** 
+<br>
 
 <b>[GET] </b> /funcionarios - Exibir informações de todos os funcionários cadastrados.<br>
 
@@ -75,9 +76,8 @@ Esta API foi desenvolvida para manipular o banco de dados de ***funcionários***
 ```
 
 <b>[DELETE] </b> /funcionarios/:id - Deletar um funcionário baseado no ID escolhido.<br>
-<br>
 
-### Validação
+### :white_check_mark: **Validação**
 
 Foi adicionada as seguintes validações para os dados recebidos nas requisições: <br>
 
@@ -89,16 +89,17 @@ Foi adicionada as seguintes validações para os dados recebidos nas requisiçõ
 - O campo "dataAdmissao" deverá conter uma data no formato 'DD/MM/AAAA';
 - O campo "salario" deverá conter apenas números, entre 4 e 7 digitos;
 - O campo "turno" deverá ser uma das opções disponíveis (matutino, vespertino, noturno);
-- O campo "email" deverá ser uma string no formato email (nome@mail.com);
+- O campo "email" deverá ser uma string no formato email (@mail.com);
 - O campo "telefone" deverá conter apenas os números do telefone, total de 11 digitos.
 
 <b> [PATCH] </b> /funcionarios/:id 
 
 Todos os campos podem ser atualizados ao mesmo tempo ou somente um campo de por vez.<br>
 
-## :white_check_mark: Rodando o projeto
+### :ballot_box_with_check: **Rodando o projeto**
+<br>
 
-### Pré-requisitos: <br>
+#### ***Pré-requisitos:*** <br>
 
 Antes de começar, caso ainda não tenha em sua máquina os itens a seguir, você precisa instalar as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Insomnia](https://insomnia.rest/download) (ou Postman). Além disso, é interessante o uso de um editor de código como o [VSCode](https://code.visualstudio.com/).

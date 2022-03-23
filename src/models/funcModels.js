@@ -69,10 +69,10 @@ const funcionarios = sequelize.define("funcionarios", {
   turno: {
     type: DataTypes.STRING,
     allowNull: false,
-      Validate: {
-        isInt: {
-          args: [["matutino", "vespertino", "noturno"]],
-          msg: "Escolha um turno entre as opções disponíveis",
+    validate: {
+      isIn: {
+        args: [["matutino", "vespertino", "noturno"]],
+        msg: "Escolha um turno entre as opções disponíveis",
       }
     }
   },
